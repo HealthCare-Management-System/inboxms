@@ -24,7 +24,11 @@ public class NotesController {
 	@Autowired
 	private NoteServiceImpl noteService;
 
-	
+
+	@GetMapping("/ping")
+	public String greetings() {
+		return "Working";
+	}
 
 	@GetMapping("/all")
 	public List<Notes> AllNotes() {
